@@ -92,7 +92,7 @@
         </div>
     {:else}
         <button class="w-screen h-screen flex flex-col items-center justify-center" on:click={playIntroSong}>
-            <img src={logo} alt="Beat for Beat" class="relative w-68 z-1"/>
+            <img src={logo} alt="Beat for Beat" class="relative w-102 z-1"/>
             <p>Press space to play</p>
         </button>
     {/if}
