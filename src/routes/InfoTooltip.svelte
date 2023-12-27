@@ -1,6 +1,6 @@
 <div class="relative">
     <div class="peer p-2 bg-gray-100 rounded-md w-10 h-10 flex items-center justify-center">?</div>
-    <div class="peer-hover:opacity-100 opacity-0 transition-opacity absolute bg-gray-100 p-2 rounded-md bottom-0 -left-110">
+    <div class="peer-hover:opacity-100 opacity-0 transition-opacity absolute bg-gray-100 p-2 rounded-md bottom-0 -left-110 pointer-events-none">
         <ul>
             <li>Press A to reveal all panels</li>
             <li>Press A to reveal all panels</li>

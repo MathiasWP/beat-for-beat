@@ -75,9 +75,8 @@
     $: song = songs[index]
 </script>
 
-
 <svelte:body on:keydown={onBodyKeydown}/>
-<div class="bg-white min-h-screen w-full flex-col flex items-center justify-center p-8 gap-20">
+<div class="bg-white h-screen w-full flex-col flex items-center justify-center p-8 gap-20">
     {#if playing}
         <div class:opacity-100={songHasBeenRevealed} class:opacity-0={!songHasBeenRevealed} class="flex flex-col gap-2 text-3xl">
             <p>
