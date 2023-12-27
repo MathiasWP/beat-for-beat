@@ -61,6 +61,7 @@ function createSongs(input: (Omit<Song, 'beats'> & { words: string })[]) {
 function createBeats(words: string): Beat[] {
     const wordsSplitted = words.split(' ')
     const amountOfNotFriendliesAllowed = Math.floor(wordsSplitted.length / 3.3)
+    
     let notFriendliesCreated = 0;
 
     function setFriendly() {

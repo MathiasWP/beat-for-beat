@@ -6,11 +6,9 @@
     import ScoreCard from "./ScoreCard.svelte";
     import logo from './logo.png'
 
-
     let audioIsPlaying = false
     let playing = false
     let songHasBeenRevealed = false
-
     let index = 0;
 
     async function wait(ms: number) {
@@ -71,12 +69,8 @@
 <div class="bg-white h-screen w-full flex-col flex items-center justify-center p-8 gap-20">
     {#if playing}
         <div class:opacity-100={songHasBeenRevealed} class:opacity-0={!songHasBeenRevealed} class="flex flex-col gap-2 text-3xl">
-            <p>
-                <b>Artist:</b> {song.artist}
-            </p>
-            <p>
-                <b>Song:</b> {song.name}
-            </p>
+            <p><b>Artist:</b> {song.artist}</p>
+            <p><b>Song:</b> {song.name}</p>
         </div>
         <div class="flex flex-wrap justify-center">
             {#each song.beats as beat, i (i)}    
