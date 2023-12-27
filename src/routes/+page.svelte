@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { fireConffeti } from "$lib/confetti";
     import { songs } from "$lib/songs";
     import BeatPanel from "./BeatPanel.svelte";
     import InfoTooltip from "./InfoTooltip.svelte";
     import ScoreCard from "./ScoreCard.svelte";
     import logo from './logo.png'
-    // @ts-expect-error: library has no typings
-    import confetti from 'canvas-confetti'
+
 
     let audioIsPlaying = false
     let playing = false
@@ -34,7 +34,7 @@
         const allBeatsOpened = song.beats.every(beat => beat.opened)
         if(allBeatsOpened) {
             songHasBeenRevealed = true
-            fireConfetti()
+            fireConffeti()
         }
     }
 
@@ -62,14 +62,6 @@
                 revealSong()
             }
         }
-    }
-
-    function fireConfetti() {
-        confetti({
-            particleCount: 100,
-            spread: 70,
-            origin: { y: 0.6 }
-        });
     }
 
     $: song = songs[index]

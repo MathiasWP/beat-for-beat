@@ -39,8 +39,6 @@ export const songs: Song[] = createSongs([
     },
 ])
 
-console.log(songs)
-
 function createSongs(input: (Omit<Song, 'beats'> & { words: string })[]) {
     const songs: Song[] = []
 
