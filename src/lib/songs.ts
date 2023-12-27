@@ -37,6 +37,11 @@ export const songs: Song[] = createSongs([
         name: `Gud, hvor du er deilig`,
         words: `Gud, hvor du er dejlig`
     },
+    {
+        artist: `Carly Rae Jepsen`,
+        name: `Call Me Maybe`,
+        words: `Where you think you're going, baby?`
+    },
 ])
 
 function createSongs(input: (Omit<Song, 'beats'> & { words: string })[]) {
@@ -55,11 +60,11 @@ function createSongs(input: (Omit<Song, 'beats'> & { words: string })[]) {
 
 function createBeats(words: string): Beat[] {
     const wordsSplitted = words.split(' ')
-    const amountOfNotFriendlies = Math.floor(wordsSplitted.length / 3.5)
+    const amountOfNotFriendliesAllowed = Math.floor(wordsSplitted.length / 3.3)
     let notFriendliesCreated = 0;
 
     function setFriendly() {
-        if(amountOfNotFriendlies === notFriendliesCreated) return true
+        if(amountOfNotFriendliesAllowed === notFriendliesCreated) return true
         const shouldBeNotFriendly = Math.random() > 0.5
         return shouldBeNotFriendly
     }
