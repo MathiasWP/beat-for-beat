@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { fly, slide } from "svelte/transition";
+    import { slide } from "svelte/transition";
 
     let score = 0;
 
